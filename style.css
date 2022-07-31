@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  max-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.header {
+  width: 30%;
+  max-width: 280px;
+  height: 100vh;
+  padding: 30px 30px;
+  margin: 0;
+  display: inline-block;
+  color: #607d8b;
+}
+
+.header-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-content h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+}
+
+.header-content h2 {
+  margin: 30px 0 20px;
+  padding: 0;
+  font-size: 18px;
+}
+
+.header-content a {
+  color: black;
+  text-decoration: none;
+}
+
+.header-content a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.team-missing {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 25px;
+}
+
+.main-container {
+  width: 70%;
+  max-height: 100%;
+  overflow-y: auto;
+  margin: 0;
+  display: inline-block;
+  border-left: 1px solid #eee;
+}
+
+.tools {
+  padding: 20px 0 15px 0;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+  width: 95%;
+  position: fixed;
+  background-color: white;
+}
+
+.tools input[type='text'] {
+  width: 100px;
+  padding: 2px 0 2px 15px;
+  margin-left: 45px;
+  font-size: 18px;
+  transition: all 0.4s ease-in-out;
+  border: 1px solid #eee;
+}
+
+.tools input[type='text']:focus {
+  width: 280px;
+  border: 1px solid gray;
+  outline: 0;
+}
+
+.tools .shadow {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.team {
+  border-bottom: 1px solid #eee;
+  display: flex;
+  max-width: 95%;
+  min-width: 50%;
+  max-height: 120px;
+  padding: 4px;
+  margin: 0 auto;
+}
+
+.teams-container {
+  margin-top: 60px;
+}
+
+.temp-team .team-names h4 {
+  padding-top: 10px;
+}
+
+.team-names {
+  height: 100%;
+  padding-left: 25px;
+  max-width: 33%;
+  min-width: 330px;
+}
+
+h3 {
+  color: black;
+  margin-bottom: 0px;
+  max-width: 80%;
+  max-height: 50%;
+  font-size: 22px;
+  margin-top: 16px;
+}
+
+h4 {
+  color: darkgray;
+  margin: 0;
+  max-width: 80%;
+  max-height: 50%;
+  font-size: 14px;
+}
+
+.team-colours {
+  width: 66%;
+}
+
+.team-colour {
+  display: inline-block;
+  height: 50px;
+  padding: 0px 5px;
+  margin-right: 8px;
+  width: 90px;
+  text-align: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 50px;
+  cursor: copy;
+}
+
+.team-colour span {
+  visibility: hidden;
+}
+
+.team-colour:hover span {
+  visibility: visible;
+}
+
+.notification-container {
+  background-color: rgba(243, 243, 243, 0.829);
+  border-radius: 0 0 10px 10px;
+  padding: 15px 20px;
+  position: fixed;
+  top: -55px;
+  right: 35%;
+  font-size: 18px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0px);
+}
+
+.notification-container p {
+  margin: 0;
+}
+
+.notification-container.show {
+  transform: translateY(50px);
+}
+
+@media only screen and (min-width: 1200px) {
+  .team-names {
+    min-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .team {
+    max-height: 120px;
+    overflow: hidden;
+  }
+
+  .team-names {
+    min-width: 250px;
+    overflow: hidden;
+  }
+
+  h4 {
+    display: none;
+  }
+
+  .team-colour {
+    display: inline-block;
+    height: 50px;
+    padding: 0px 5px;
+    margin-right: 8px;
+    width: 60px;
+    font-size: 12px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header {
+    display: block;
+    max-width: none;
+    min-width: none;
+    width: 70%;
+    border: 0;
+    height: auto;
+    padding: 20px 30px 10px;
+  }
+
+  .header-content {
+    width: 100%;
+  }
+
+  .team-missing {
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+
+  .main-container {
+    display: block;
+    width: 100%;
+    overflow-y: auto;
+    position: relative;
+  }
+
+  .tools {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .tools input[type='text'] {
+    width: 40%;
+  }
+
+  .notification-container {
+    top: -55px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  body {
+    width: 100%;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .tools input[type='text'] {
+    margin-left: 15px;
+  }
+
+  .team {
+    height: 100px;
+  }
+
+  .team-names {
+    padding-left: 5px;
+  }
+
+  .team-colour {
+    display: flex;
+    flex-direction: column;
+    padding: none;
+    margin: none;
+    height: 30px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .team-names {
+    min-width: 170px;
+  }
+  h3 {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+}
